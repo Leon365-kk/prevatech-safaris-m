@@ -23,16 +23,11 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-slot', '@radix-ui/react-toast', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          radix: ['@radix-ui/react-dialog', '@radix-ui/react-select', '@radix-ui/react-tabs'],
+          lucide: ['lucide-react'],
         },
       },
     },
     chunkSizeWarningLimit: 1000,
-  },
-  preview: {
-    port: 4173,
-    host: true,
   },
 }));
