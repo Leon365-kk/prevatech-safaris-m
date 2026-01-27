@@ -59,9 +59,15 @@ const AirportTransfer = () => {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
                 Airport Transfers
               </h1>
-              <p className="text-xl text-primary-foreground/90 max-w-2xl">
+              <p className="text-xl text-primary-foreground/90 max-w-2xl mb-6">
                 Reliable, comfortable, and punctual airport transportation services in Nairobi and across Kenya.
               </p>
+              <Link to="/book">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Book Your Transfer
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -176,15 +182,6 @@ const AirportTransfer = () => {
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link to="/book">
-              <Button size="lg">
-                Book Your Transfer
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
