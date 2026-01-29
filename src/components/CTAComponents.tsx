@@ -9,7 +9,8 @@ import {
   ArrowRight,
   Star,
   Clock,
-  CheckCircle
+  CheckCircle,
+  MessageSquare
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ interface CTAButtonProps {
   text?: string;
   href?: string;
   onClick?: () => void;
-  icon?: 'message' | 'phone' | 'calendar' | 'calculator' | 'arrow';
+  icon?: 'message' | 'phone' | 'calendar' | 'calculator' | 'arrow' | 'whatsapp';
   fullWidth?: boolean;
 }
 
@@ -39,6 +40,7 @@ const CTAButton = ({
       case 'calendar': return <Calendar className="w-4 h-4" />;
       case 'calculator': return <Calculator className="w-4 h-4" />;
       case 'arrow': return <ArrowRight className="w-4 h-4" />;
+      case 'whatsapp': return <MessageSquare className="w-4 h-4" />;
       default: return <ArrowRight className="w-4 h-4" />;
     }
   };
@@ -68,7 +70,7 @@ const CTAButton = ({
 
   const buttonContent = (
     <>
-      {text}
+      <span className="text-current">{text}</span>
       <span className="ml-2">{getIcon()}</span>
     </>
   );
@@ -148,15 +150,17 @@ const CTACard = ({
           </ul>
         )}
         
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex gap-3">
           <CTAButton 
             {...primaryCTA}
             fullWidth={!secondaryCTA}
           />
           {secondaryCTA && (
             <CTAButton 
-              {...secondaryCTA}
-              variant="outline"
+              text="WhatsApp"
+              href="https://wa.me/254724022016"
+              icon="whatsapp"
+              variant="primary"
               size="md"
             />
           )}

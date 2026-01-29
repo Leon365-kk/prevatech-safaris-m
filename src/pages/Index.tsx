@@ -7,22 +7,14 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import SafariRecommendations from "@/components/SafariRecommendations";
-import { CTAButton, ExpertCTA, CTACard } from "@/components/CTAComponents";
-import ExitIntentModal from "@/components/ExitIntentModal";
-import { useExitIntent, useScrollTrigger } from "@/hooks/useExitIntent";
+import { CTAButton, CTACard } from "@/components/CTAComponents";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import { DefaultSEO, PrevatechLocalBusinessSchema } from "@/components/SEOSchemas";
 import { useTranslation } from "@/hooks/useTranslation";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const [showExitModal, setShowExitModal] = useState(false);
   const { t } = useTranslation();
-  
-  // Exit intent trigger (desktop only, after 30 seconds)
-  const hasTriggeredExit = useExitIntent(() => setShowExitModal(true), 30000);
-  
-  // Scroll trigger (70% down the page)
-  const hasTriggeredScroll = useScrollTrigger(() => setShowExitModal(true), 0.7);
 
   return (
     <div className="min-h-screen">
@@ -55,7 +47,7 @@ const Index = () => {
                 title={t('cta.talkToSafariExpert')}
                 description={t('cta.talkToSafariExpert') + " - " + t('cta.personalizedRecommendations')}
                 primaryCTA={{ text: t('cta.callNow'), href: "tel:+254724022016", icon: "phone" }}
-                secondaryCTA={{ text: t('contact.whatsapp'), href: "https://wa.me/254724022016", icon: "message" }}
+                secondaryCTA={{ text: t('contact.whatsapp'), href: "https://wa.me/254724022016", icon: "whatsapp" }}
                 features={[t('cta.instantAnswers'), t('cta.expertAdvice'), t('cta.support247')]}
               />
               <CTACard
@@ -77,18 +69,6 @@ const Index = () => {
         
         {/* Safari Recommendations */}
         <SafariRecommendations />
-        
-        {/* Why Choose Us with Expert CTA */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <WhyChooseUs />
-            
-            {/* Expert CTA */}
-            <div className="mt-16">
-              <ExpertCTA showUrgency={true} />
-            </div>
-          </div>
-        </section>
         
         {/* Testimonials */}
         <Testimonials />
@@ -116,7 +96,7 @@ const Index = () => {
                 title={t('cta.needHelp')}
                 description={t('cta.readyExperts')}
                 primaryCTA={{ text: t('cta.talkToSafariExpert'), href: "tel:+254724022016", icon: "phone" }}
-                secondaryCTA={{ text: t('contact.whatsapp'), href: "https://wa.me/254724022016", icon: "message" }}
+                secondaryCTA={{ text: t('contact.whatsapp'), href: "https://wa.me/254724022016", icon: "whatsapp" }}
                 features={[t('cta.freeConsultation'), t('cta.instantAnswers2'), t('cta.expertAdvice')]}
                 variant="urgent"
               />
@@ -125,19 +105,27 @@ const Index = () => {
             {/* Quick Stats */}
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">5000+</div>
+                <div className="text-3xl font-bold text-primary mb-2">
+                  <AnimatedCounter end={5000} suffix="+" duration={2500} />
+                </div>
                 <div className="text-sm text-muted-foreground">{t('cta.happyTravelers')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">4.8/5</div>
+                <div className="text-3xl font-bold text-primary mb-2">
+                  <AnimatedCounter end={4.8} suffix="/5" decimals={1} duration={2000} />
+                </div>
                 <div className="text-sm text-muted-foreground">{t('cta.averageRating')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-3xl font-bold text-primary mb-2">
+                  <AnimatedCounter end={15} suffix="+" duration={1800} />
+                </div>
                 <div className="text-sm text-muted-foreground">{t('cta.yearsExperience')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+                <div className="text-3xl font-bold text-primary mb-2">
+                  24/7
+                </div>
                 <div className="text-sm text-muted-foreground">{t('cta.support')}</div>
               </div>
             </div>
@@ -147,9 +135,6 @@ const Index = () => {
       
       <Footer />
       <WhatsAppButton />
-      
-      {/* Exit Intent Modal */}
-      <ExitIntentModal isOpen={showExitModal} onClose={() => setShowExitModal(false)} />
     </div>
   );
 };

@@ -40,6 +40,8 @@ const BookOnline = () => {
     phone: "",
     serviceType: "",
     date: "",
+    time: "",
+    pickupLocation: "",
     guests: "",
     destination: "",
     message: "",
@@ -63,6 +65,8 @@ const BookOnline = () => {
 *Trip Details:*
 • Service: ${formData.serviceType}
 • Date: ${selectedDate ? selectedDate.toLocaleDateString() : formData.date}
+• Time: ${formData.time || "Not specified"}
+• Pick Up Location: ${formData.pickupLocation || "Not specified"}
 • Guests: ${formData.guests}
 • Destination: ${formData.destination || "Not specified"}
 • Package: ${selectedPackage || "Not specified"}${addonDetails}
@@ -271,6 +275,26 @@ I would like to book this trip. Please confirm availability.`;
                             value={formData.date}
                             onChange={handleChange}
                             required
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="time">Pick Up Time</Label>
+                          <Input
+                            id="time"
+                            name="time"
+                            type="time"
+                            value={formData.time}
+                            onChange={handleChange}
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="pickupLocation">Pick Up Location</Label>
+                          <Input
+                            id="pickupLocation"
+                            name="pickupLocation"
+                            placeholder="e.g., JKIA Airport, Hotel Name, Address"
+                            value={formData.pickupLocation}
+                            onChange={handleChange}
                           />
                         </div>
                       </div>
