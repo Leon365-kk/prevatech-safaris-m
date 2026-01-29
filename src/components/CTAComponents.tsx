@@ -20,7 +20,7 @@ interface CTAButtonProps {
   text?: string;
   href?: string;
   onClick?: () => void;
-  icon?: 'message' | 'phone' | 'calendar' | 'calculator' | 'arrow' | 'whatsapp';
+  icon?: 'message' | 'phone' | 'calendar' | 'calculator' | 'arrow' | 'whatsapp' | undefined;
   fullWidth?: boolean;
 }
 
@@ -30,7 +30,7 @@ const CTAButton = ({
   text = 'Get a Quote', 
   href = '/plan-my-trip',
   onClick,
-  icon = 'arrow',
+  icon,
   fullWidth = false
 }: CTAButtonProps) => {
   const getIcon = () => {
@@ -71,7 +71,7 @@ const CTAButton = ({
   const buttonContent = (
     <>
       <span className="text-current">{text}</span>
-      <span className="ml-2">{getIcon()}</span>
+      {icon && <span className="ml-2">{getIcon()}</span>}
     </>
   );
 
@@ -157,9 +157,7 @@ const CTACard = ({
           />
           {secondaryCTA && (
             <CTAButton 
-              text="WhatsApp"
-              href="https://wa.me/254724022016"
-              icon="whatsapp"
+              {...secondaryCTA}
               variant="primary"
               size="md"
             />

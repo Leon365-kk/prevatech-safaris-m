@@ -95,8 +95,8 @@ const Index = () => {
               <CTACard
                 title={t('cta.needHelp')}
                 description={t('cta.readyExperts')}
-                primaryCTA={{ text: t('cta.talkToSafariExpert'), href: "tel:+254724022016", icon: "phone" }}
-                secondaryCTA={{ text: t('contact.whatsapp'), href: "https://wa.me/254724022016", icon: "whatsapp" }}
+                primaryCTA={{ text: t('cta.talkToSafariExpert'), href: "tel:+254724022016" }}
+                secondaryCTA={{ text: t('contact.whatsapp'), href: "https://wa.me/254724022016" }}
                 features={[t('cta.freeConsultation'), t('cta.instantAnswers2'), t('cta.expertAdvice')]}
                 variant="urgent"
               />
