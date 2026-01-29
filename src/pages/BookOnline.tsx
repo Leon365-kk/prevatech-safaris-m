@@ -50,31 +50,29 @@ const BookOnline = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Build WhatsApp message with booking details
-    const addonDetails = selectedAddons.length > 0 
-      ? `\n\n*Selected Add-ons:*\n${selectedAddons.map(addon => `• ${addon.name} - $${addon.price}`).join('\n')}\n*Add-on Total: $${selectedAddons.reduce((sum, addon) => sum + addon.price, 0)}`
-      : '';
-    
-    const message = `🦁 *New Booking Request*
+    // Format service type to match the example
+    const getServiceName = (serviceType: string) => {
+      switch (serviceType) {
+        case 'safari': return 'Safari Adventure';
+        case 'airport': return 'Airport Transfer';
+        case 'day-tour': return 'Day Tour';
+        case 'custom': return 'Custom Package';
+        default: return serviceType;
+      }
+    };
 
-*Personal Information:*
-• Name: ${formData.name}
-• Email: ${formData.email}
-• Phone: ${formData.phone}
+    const message = `*New Booking Request*
 
-*Trip Details:*
-• Service: ${formData.serviceType}
-• Date: ${selectedDate ? selectedDate.toLocaleDateString() : formData.date}
-• Time: ${formData.time || "Not specified"}
-• Pick Up Location: ${formData.pickupLocation || "Not specified"}
-• Guests: ${formData.guests}
-• Destination: ${formData.destination || "Not specified"}
-• Package: ${selectedPackage || "Not specified"}${addonDetails}
-
-*Additional Info:*
-${formData.message || "None"}
-
-I would like to book this trip. Please confirm availability.`;
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Service:* ${getServiceName(formData.serviceType)}
+*Pick-up Location:* ${formData.pickupLocation || "Not specified"}
+*Drop-off Location:* ${formData.destination || "Not specified"}
+*Travel Date:* ${selectedDate ? selectedDate.toISOString().split('T')[0] : formData.date}
+*Pick-up Time:* ${formData.time || "Not specified"}
+*Number of Travelers:* ${formData.guests}
+*Message:* ${formData.message || "None"}`;
 
     const whatsappNumber = "254724022016";
     const encodedMessage = encodeURIComponent(message);
