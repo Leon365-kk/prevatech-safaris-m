@@ -34,13 +34,17 @@ import {
   destinations, 
   blogPosts 
 } from '@/lib/safari-details';
+import { getPackageById } from '@/lib/packages-data';
 
 const PackageDetails = () => {
   const { packageId } = useParams<{ packageId: string }>();
   
-  // Sample package data - in real app this would come from API/database
-  const packageData = {
-    id: packageId || 'maasai-mara-3days',
+  // Get package data from our data structure
+  const packageData = getPackageById(packageId || 'maasai-mara-wildebeest-migration-2025');
+  
+  // Fallback data if package not found
+  const fallbackPackage = {
+    id: packageId || 'maasai-mara-wildebeest-migration-2025',
     name: 'Maasai Mara Wildebeest Migration 2025',
     description: 'Experience the world-famous Great Migration in Kenya\'s premier game reserve. This 3-day adventure takes you to the heart of the action where millions of wildebeest cross the Mara River.',
     price: 'Ksh17,000',
@@ -79,55 +83,57 @@ const PackageDetails = () => {
     accommodation: 'Luxury lodge',
     transport: '4x4 safari vehicle'
   };
+  
+  const currentPackage = packageData || fallbackPackage;
 
-  const itinerary = sampleItineraries['maasai-mara-3days'] || [];
-  const destination = destinations.find(d => d.id === 'maasai-mara');
+  const itinerary = sampleItineraries[currentPackage.id] || [];
+  const destination = destinations.find(d => d.id === currentPackage.location.toLowerCase().replace(/\s+/g, '-'));
   const relatedPosts = blogPosts.filter(post => 
     post.tags.some(tag => 
-      ['safari', 'wildlife', 'migration', 'maasai mara'].includes(tag.toLowerCase())
+      ['safari', 'wildlife', 'migration', currentPackage.location.toLowerCase()].includes(tag.toLowerCase())
     )
   );
 
-  // Sample media assets
+  // Sample media assets - dynamic based on package
   const sampleMedia = [
     {
       id: '1',
       type: 'image' as const,
-      url: '/media/mara-wildebeest.jpg',
-      title: 'Wildebeest Migration',
-      description: 'Thousands of wildebeest crossing the Mara River',
-      location: 'Maasai Mara',
-      category: 'wildlife' as const,
+      url: `/media/${currentPackage.location.toLowerCase().replace(/\s+/g, '-')}-1.jpg`,
+      title: `${currentPackage.location} Experience`,
+      description: `Beautiful scenery from ${currentPackage.location}`,
+      location: currentPackage.location,
+      category: 'landscape' as const,
       featured: true
     },
     {
       id: '2',
       type: 'image' as const,
-      url: '/media/mara-lions.jpg',
-      title: 'Lion Pride',
-      description: 'Pride of lions resting in the savanna',
-      location: 'Maasai Mara',
+      url: `/media/${currentPackage.location.toLowerCase().replace(/\s+/g, '-')}-2.jpg`,
+      title: 'Wildlife Viewing',
+      description: `Wildlife encounters in ${currentPackage.location}`,
+      location: currentPackage.location,
       category: 'wildlife' as const,
       featured: true
     },
     {
       id: '3',
       type: 'video' as const,
-      url: '/media/mara-safari.mp4',
-      thumbnail: '/media/mara-safari-thumb.jpg',
-      title: 'Safari Experience',
-      description: 'Experience the thrill of a Maasai Mara safari',
-      location: 'Maasai Mara',
+      url: `/media/${currentPackage.location.toLowerCase().replace(/\s+/g, '-')}-video.mp4`,
+      thumbnail: `/media/${currentPackage.location.toLowerCase().replace(/\s+/g, '-')}-video-thumb.jpg`,
+      title: `${currentPackage.name} Experience`,
+      description: `Experience the magic of ${currentPackage.location}`,
+      location: currentPackage.location,
       category: 'activities' as const,
       featured: false
     },
     {
       id: '4',
       type: 'image' as const,
-      url: '/media/mara-lodge.jpg',
-      title: 'Luxury Lodge',
-      description: 'Our premium accommodation with stunning views',
-      location: 'Maasai Mara',
+      url: `/media/${currentPackage.location.toLowerCase().replace(/\s+/g, '-')}-accommodation.jpg`,
+      title: 'Premium Accommodation',
+      description: `Our ${currentPackage.accommodation.toLowerCase()} with stunning views`,
+      location: currentPackage.location,
       category: 'accommodation' as const,
       featured: false
     }
@@ -150,27 +156,27 @@ const PackageDetails = () => {
               </Link>
               <div className="max-w-3xl">
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
-                  {packageData.name}
+                  {currentPackage.name}
                 </h1>
                 <p className="text-xl text-primary-foreground/90 mb-6">
-                  {packageData.description}
+                  {currentPackage.description}
                 </p>
                 <div className="flex flex-wrap gap-4 text-primary-foreground">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-5 h-5" />
-                    <span>{packageData.location}</span>
+                    <span>{currentPackage.location}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-5 h-5" />
-                    <span>{packageData.duration} days</span>
+                    <span>{currentPackage.duration} days</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    <span>{packageData.rating} rating</span>
+                    <span>{currentPackage.rating} rating</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <DollarSign className="w-5 h-5" />
-                    <span>{packageData.price}</span>
+                    <span>{currentPackage.price}</span>
                   </div>
                 </div>
               </div>
@@ -217,7 +223,7 @@ const PackageDetails = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-4">
-                        {packageData.highlights.map((highlight, index) => (
+                        {currentPackage.highlights.map((highlight, index) => (
                           <div key={index} className="flex items-center gap-2">
                             <CheckCircle className="w-5 h-5 text-green-600" />
                             <span>{highlight}</span>
@@ -234,7 +240,7 @@ const PackageDetails = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-3">
-                        {packageData.includes.map((item, index) => (
+                        {currentPackage.includes.map((item, index) => (
                           <div key={index} className="flex items-center gap-2 text-sm">
                             <CheckCircle className="w-4 h-4 text-green-600" />
                             <span>{item}</span>
@@ -251,7 +257,7 @@ const PackageDetails = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-3">
-                        {packageData.excludes.map((item, index) => (
+                        {currentPackage.excludes.map((item, index) => (
                           <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                             <div className="w-4 h-4 rounded-full border-2 border-muted-foreground/50" />
                             <span>{item}</span>
@@ -271,26 +277,26 @@ const PackageDetails = () => {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">{packageData.price}</div>
+                        <div className="text-3xl font-bold text-primary">{currentPackage.price}</div>
                         <div className="text-sm text-muted-foreground">per person</div>
                       </div>
                       
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
                           <span>Duration:</span>
-                          <span>{packageData.duration} days</span>
+                          <span>{currentPackage.duration} days</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Group Size:</span>
-                          <span>{packageData.groupSize}</span>
+                          <span>{currentPackage.groupSize}</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Difficulty:</span>
-                          <span>{packageData.difficulty}</span>
+                          <span>{currentPackage.difficulty}</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Accommodation:</span>
-                          <span>{packageData.accommodation}</span>
+                          <span>{currentPackage.accommodation}</span>
                         </div>
                       </div>
 
@@ -331,7 +337,7 @@ const PackageDetails = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                        {packageData.bestTimeToVisit}
+                        {currentPackage.bestTimeToVisit}
                       </p>
                     </CardContent>
                   </Card>
@@ -352,8 +358,8 @@ const PackageDetails = () => {
             <TabsContent value="gallery">
               <MediaGallery 
                 media={sampleMedia}
-                title="Safari Gallery"
-                description="Experience the magic of Maasai Mara through our stunning photos and videos"
+                title={`${currentPackage.location} Gallery`}
+                description={`Experience the magic of ${currentPackage.location} through our stunning photos and videos`}
               />
             </TabsContent>
 
@@ -361,7 +367,7 @@ const PackageDetails = () => {
             <TabsContent value="guide">
               <TravelGuide 
                 guide={sampleTravelGuide}
-                destination={packageData.location}
+                destination={currentPackage.location}
               />
             </TabsContent>
 
