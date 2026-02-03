@@ -86,7 +86,7 @@ const PackageDetails = () => {
   
   const currentPackage = packageData || fallbackPackage;
 
-  const itinerary = sampleItineraries[currentPackage.id] || [];
+  const itinerary = currentPackage.itinerary || [];
   const destination = destinations.find(d => d.id === currentPackage.location.toLowerCase().replace(/\s+/g, '-'));
   const relatedPosts = blogPosts.filter(post => 
     post.tags.some(tag => 

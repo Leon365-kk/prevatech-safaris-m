@@ -13,15 +13,6 @@ import { allPackages as packagesData, getPackagesByCategory, searchPackages } fr
 
 const categories = [
   "All",
-  "Beach",
-  "Safari",
-  "Weekend",
-  "International",
-  "Budget Safari",
-  "Midrange Safari",
-  "Luxury Safari",
-  "Tanzania",
-  "East Africa",
   "Flying Safari",
 ];
 
@@ -75,7 +66,7 @@ const Safaris = () => {
                 Travel Packages 2025
               </h1>
               <p className="text-xl text-primary-foreground/90 max-w-2xl">
-                Discover our exclusive collection of safari adventures, beach getaways, and international tours.
+                Discover our exclusive collection of safari adventures, beach getaways, and flying experiences.
               </p>
             </div>
           </div>
@@ -300,35 +291,6 @@ const Safaris = () => {
               </CardContent>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Budget Safaris</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Affordable adventures without compromising on experience
-                </p>
-                <Link to="/safaris/budget">
-                  <Button size="sm" variant="outline">View Budget Packages</Button>
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-8 h-8 text-yellow-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Luxury Safaris</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Premium experiences with top-tier accommodations and personalized service
-                </p>
-                <Link to="/safaris/luxury">
-                  <Button size="sm" variant="outline">View Luxury Packages</Button>
-                </Link>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
