@@ -5,8 +5,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Car, Clock, Shield, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import airportImage from "@/assets/airport-hero-custom.jpg";
-import fleet2 from "@/assets/fleet6.jpg";
+import airportImage from "@/assets/vehicle 11.jpeg";
+import fleet2 from "@/assets/vehicle 12.jpeg";
 import fleet3 from "@/assets/fleet10.jpg";
 import fleet4 from "@/assets/fleet8.jpg";
 
