@@ -5,9 +5,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Car, Clock, Shield, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import airportImage from "@/assets/airport-hero-new.jpg";
+import airportImage from "@/assets/fleet9.jpg";
 import fleet2 from "@/assets/fleet6.jpg";
-import fleet3 from "@/assets/premium-vehicle-3.jpg";
+import fleet3 from "@/assets/fleet10.jpg";
 import fleet4 from "@/assets/fleet8.jpg";
 
 const transferServices = [
