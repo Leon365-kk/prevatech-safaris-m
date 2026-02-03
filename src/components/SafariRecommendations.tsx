@@ -51,115 +51,115 @@ const SafariRecommendations = () => {
     '3days': [
       {
         id: 'amboseli-3days',
-        name: 'Amboseli 3-Day Safari',
+        name: 'Bless Wazazi Wafike Amboseli',
         duration: '3 Days',
-        price: 'From Ksh 45,000',
+        price: 'From Ksh 54,500',
         location: 'Amboseli National Park',
         rating: 4.8,
         highlights: ['Mt. Kilimanjaro views', 'Elephant herds', 'Cultural visits'],
         bestFor: ['Wildlife photography', 'Short trips', 'First-time safari'],
         image: animal11,
-        link: '/safaris/amboseli-3days'
+        link: '/safaris/bless-wazazi-wafike-amboseli-3-days-2-nights'
       },
       {
         id: 'nakuru-3days',
-        name: 'Lake Nakuru Weekend Safari',
-        duration: '3 Days',
-        price: 'From Ksh 35,000',
+        name: 'Nakuru Weekend Getaways',
+        duration: '2 Days',
+        price: 'From Ksh 11,750',
         location: 'Lake Nakuru National Park',
         rating: 4.7,
         highlights: ['Flamingo watching', 'Rhino sanctuary', 'Hiking trails'],
         bestFor: ['Bird watching', 'Weekend getaways', 'Nature lovers'],
         image: animal12,
-        link: '/safaris/lake-nakuru-3days'
+        link: '/safaris/nakuru-weekend-getaways'
       },
       {
         id: 'nairobi-3days',
-        name: 'Nairobi National Park Safari',
-        duration: '3 Days',
-        price: 'From Ksh 25,000',
-        location: 'Nairobi National Park',
+        name: 'Nairobi Staycations',
+        duration: '2 Days',
+        price: 'From Ksh 5,200',
+        location: 'Nairobi',
         rating: 4.6,
-        highlights: ['City skyline views', 'Big 5', 'Animal orphanage'],
+        highlights: ['City skyline views', 'Luxury hotels', 'Urban relaxation'],
         bestFor: ['Business travelers', 'Quick escapes', 'Family trips'],
         image: animal13,
-        link: '/safaris/nairobi-3days'
+        link: '/safaris/nairobi-staycations'
       }
     ],
     '5days': [
       {
         id: 'maasai-mara-5days',
-        name: 'Maasai Mara 5-Day Adventure',
-        duration: '5 Days',
-        price: 'From Ksh 85,000',
+        name: 'Maasai Mara Wildebeest Migration',
+        duration: '3 Days',
+        price: 'From Ksh 17,000',
         location: 'Maasai Mara National Reserve',
         rating: 4.9,
         highlights: ['Great Migration', 'Big 5 sightings', 'Balloon safaris'],
         bestFor: ['Wildlife enthusiasts', 'Photographers', 'Classic safari'],
         image: animal14,
-        link: '/safaris/maasai-mara-5days'
+        link: '/safaris/maasai-mara-wildebeest-migration-2025'
       },
       {
         id: 'samburu-5days',
-        name: 'Samburu & Aberdares Explorer',
-        duration: '5 Days',
-        price: 'From Ksh 75,000',
+        name: '3 Days Samburu Package',
+        duration: '3 Days',
+        price: 'From Ksh 23,100',
         location: 'Samburu National Reserve',
         rating: 4.8,
         highlights: ['Special 5 species', 'Cultural experiences', 'Mountain views'],
         bestFor: ['Adventure seekers', 'Cultural tourism', 'Unique wildlife'],
         image: animal15,
-        link: '/safaris/samburu-5days'
+        link: '/safaris/3-days-samburu-package'
       },
       {
         id: 'coast-safari-5days',
-        name: 'Tsavo & Coast Safari',
-        duration: '5 Days',
-        price: 'From Ksh 65,000',
+        name: '3 Days Tsavo Packages',
+        duration: '3 Days',
+        price: 'From Ksh 29,600',
         location: 'Tsavo National Parks',
         rating: 4.7,
         highlights: ['Red elephants', 'Lava flows', 'Beach extension'],
         bestFor: ['Beach & safari combo', 'Adventure', 'Scenic landscapes'],
         image: animal16,
-        link: '/safaris/tsavo-coast-5days'
+        link: '/safaris/3-days-tsavo-packages'
       }
     ],
     '7plus': [
       {
         id: 'grand-kenya-7days',
-        name: 'Grand Kenya Safari',
-        duration: '7 Days',
-        price: 'From Ksh 120,000',
-        location: 'Multiple Parks',
+        name: 'Mombasa 3 Days Package 2025',
+        duration: '3 Days',
+        price: 'From Ksh 15,999',
+        location: 'Mombasa North Coast',
         rating: 4.9,
-        highlights: ['4 major parks', 'Diverse ecosystems', 'Luxury lodges'],
-        bestFor: ['Comprehensive experience', 'First-time visitors', 'Special occasions'],
+        highlights: ['Beach therapy', 'Ocean views', 'Coastal cuisine'],
+        bestFor: ['Beach lovers', 'Relaxation seekers', 'Coastal adventures'],
         image: animal3,
-        link: '/safaris/grand-kenya-7days'
+        link: '/safaris/mombasa-3-days-package-2025'
       },
       {
         id: 'migration-7days',
-        name: 'Great Migration Special',
-        duration: '7 Days',
-        price: 'From Ksh 150,000',
-        location: 'Maasai Mara & Serengeti',
+        name: '3 Days Diani Packages',
+        duration: '3 Days',
+        price: 'From Ksh 17,600',
+        location: 'Diani Ukunda',
         rating: 5.0,
-        highlights: ['River crossings', 'Predator action', 'Prime timing'],
-        bestFor: ['Migration viewing', 'Photographers', 'Wildlife documentaries'],
+        highlights: ['Africa\'s finest beach', 'Marine life', 'Snorkeling'],
+        bestFor: ['Beach enthusiasts', 'Water sports', 'Luxury travel'],
         image: animal9,
-        link: '/safaris/migration-special-7days'
+        link: '/safaris/3-days-diani-packages'
       },
       {
         id: 'kenya-ultimate-10days',
-        name: 'Ultimate Kenya Experience',
-        duration: '10 Days',
-        price: 'From Ksh 180,000',
-        location: 'Kenya Circuit',
+        name: 'Naivasha Weekend Getaways',
+        duration: '2 Days',
+        price: 'From Ksh 3,800',
+        location: 'Naivasha',
         rating: 5.0,
-        highlights: ['7 national parks', 'Beach relaxation', 'Cultural immersion'],
-        bestFor: ['Ultimate adventure', 'Honeymooners', 'Bucket list'],
+        highlights: ['Lake activities', 'Boat rides', 'Rift Valley views'],
+        bestFor: ['Weekend escapes', 'Nature lovers', 'Quick getaways'],
         image: animal10,
-        link: '/safaris/kenya-ultimate-10days'
+        link: '/safaris/naivasha-weekend-getaways'
       }
     ]
   };

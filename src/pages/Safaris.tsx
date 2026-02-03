@@ -13,6 +13,9 @@ import { allPackages as packagesData, getPackagesByCategory, searchPackages } fr
 
 const categories = [
   "All",
+  "Beach",
+  "Safari",
+  "Weekend",
   "Flying Safari",
 ];
 

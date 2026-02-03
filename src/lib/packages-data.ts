@@ -30,7 +30,7 @@ export const allPackages: Package[] = [
     location: "Mombasa North Coast",
     rating: 4.5,
     duration: 3,
-    category: "Flying Safari",
+    category: "Beach",
     highlights: [
       "Beautiful white sand beaches",
       "Crystal clear turquoise waters",
@@ -56,198 +56,7 @@ export const allPackages: Package[] = [
     difficulty: "Easy",
     groupSize: "2-8 people",
     accommodation: "Beachfront resort",
-    transport: "Private vehicle",
-    itinerary: [
-      {
-        day: 1,
-        title: 'Nairobi to Mombasa - Flying Beach Escape',
-        departureTime: '07:00 AM',
-        activities: [
-          {
-            time: '07:00 AM',
-            activity: 'Airport Transfer',
-            description: 'Transfer from Nairobi hotel to Wilson Airport for morning flight to Mombasa',
-            location: 'Wilson Airport'
-          },
-          {
-            time: '08:30 AM',
-            activity: 'Flight to Mombasa',
-            description: 'Scenic 45-minute flight over Kenyan landscape to coastal paradise',
-            location: 'Flight to Mombasa'
-          },
-          {
-            time: '09:30 AM',
-            activity: 'Arrival & Transfer',
-            description: 'Arrive at Mombasa Airport and transfer to beachfront resort',
-            location: 'Mombasa Airport'
-          },
-          {
-            time: '11:00 AM',
-            activity: 'Check-in & Welcome',
-            description: 'Check-in at beachfront resort with welcome tropical drink',
-            location: 'Beachfront Resort'
-          },
-          {
-            time: '01:00 PM',
-            activity: 'Beachfront Lunch',
-            description: 'Fresh seafood lunch with ocean views at resort restaurant',
-            location: 'Resort Restaurant'
-          },
-          {
-            time: '03:00 PM',
-            activity: 'Beach Orientation',
-            description: 'Guided walk along white sand beaches and swimming in turquoise waters',
-            location: 'Mombasa Beach'
-          },
-          {
-            time: '05:00 PM',
-            activity: 'Sunset Cocktails',
-            description: 'Tropical cocktails while watching Indian Ocean sunset',
-            location: 'Beach Bar'
-          },
-          {
-            time: '07:30 PM',
-            activity: 'Dinner',
-            description: 'Coastal cuisine dinner featuring Swahili specialties',
-            location: 'Resort Restaurant'
-          }
-        ],
-        meals: {
-          breakfast: 'Continental breakfast at Nairobi hotel',
-          lunch: 'Fresh seafood lunch at resort',
-          dinner: 'Swahili coastal cuisine dinner'
-        },
-        accommodation: {
-          name: 'Paradise Beach Resort',
-          type: 'resort',
-          rating: 4,
-          description: 'Luxury beachfront resort with direct beach access and ocean views'
-        },
-        highlights: ['Scenic flight to coast', 'First beach experience', 'Ocean sunset', 'Tropical welcome'],
-        travelTime: '45 minutes flight + transfers',
-        distance: '500 km by air'
-      },
-      {
-        day: 2,
-        title: 'Full Beach & Cultural Experience',
-        departureTime: '08:00 AM',
-        activities: [
-          {
-            time: '08:00 AM',
-            activity: 'Beach Breakfast',
-            description: 'Breakfast with ocean views at beachside restaurant',
-            location: 'Beach Restaurant'
-          },
-          {
-            time: '09:30 AM',
-            activity: 'Water Sports',
-            description: 'Optional water sports: snorkeling, jet skiing, or glass-bottom boat tour',
-            location: 'Indian Ocean'
-          },
-          {
-            time: '12:00 PM',
-            activity: 'Beach Relaxation',
-            description: 'Free time for sunbathing, swimming, or beach massage',
-            location: 'Resort Beach'
-          },
-          {
-            time: '01:30 PM',
-            activity: 'Lunch',
-            description: 'Light lunch with tropical fruits and fresh juices',
-            location: 'Beach Club'
-          },
-          {
-            time: '03:00 PM',
-            activity: 'Mombasa City Tour',
-            description: 'Historic tour of Old Town, Fort Jesus, and local markets',
-            location: 'Mombasa Old Town'
-          },
-          {
-            time: '05:30 PM',
-            activity: 'Cultural Experience',
-            description: 'Visit local Swahili village for cultural immersion and traditional dance',
-            location: 'Local Village'
-          },
-          {
-            time: '07:00 PM',
-            activity: 'Beach BBQ Dinner',
-            description: 'Beach barbecue dinner under the stars with live entertainment',
-            location: 'Beach BBQ Area'
-          }
-        ],
-        meals: {
-          breakfast: 'Ocean view breakfast',
-          lunch: 'Light tropical lunch',
-          dinner: 'Beach BBQ dinner'
-        },
-        accommodation: {
-          name: 'Paradise Beach Resort',
-          type: 'resort',
-          rating: 4,
-          description: 'Luxury beachfront resort with direct beach access and ocean views'
-        },
-        highlights: ['Water sports adventure', 'Historic Mombasa tour', 'Cultural immersion', 'Beach BBQ experience'],
-        travelTime: 'Full day beach and cultural activities',
-        distance: 'Local tours'
-      },
-      {
-        day: 3,
-        title: 'Final Beach Morning & Return Flight',
-        departureTime: '08:00 AM',
-        activities: [
-          {
-            time: '08:00 AM',
-            activity: 'Sunrise Beach Walk',
-            description: 'Early morning beach walk and swimming in calm waters',
-            location: 'Mombasa Beach'
-          },
-          {
-            time: '09:30 AM',
-            activity: 'Farewell Breakfast',
-            description: 'Final coastal breakfast with ocean views',
-            location: 'Beach Restaurant'
-          },
-          {
-            time: '11:00 AM',
-            activity: 'Check-out & Shopping',
-            description: 'Check-out and last-minute souvenir shopping at local markets',
-            location: 'Local Markets'
-          },
-          {
-            time: '01:00 PM',
-            activity: 'Transfer to Airport',
-            description: 'Transfer to Mombasa Airport for return flight',
-            location: 'Mombasa Airport'
-          },
-          {
-            time: '02:30 PM',
-            activity: 'Flight to Nairobi',
-            description: 'Afternoon flight back to Wilson Airport, Nairobi',
-            location: 'Flight to Nairobi'
-          },
-          {
-            time: '03:30 PM',
-            activity: 'Arrival in Nairobi',
-            description: 'Arrive at Wilson Airport and transfer to hotel or home',
-            location: 'Wilson Airport'
-          }
-        ],
-        meals: {
-          breakfast: 'Farewell ocean view breakfast',
-          lunch: 'Light snack on flight',
-          dinner: 'Not included (arrive in afternoon)'
-        },
-        accommodation: {
-          name: 'Not included',
-          type: 'hotel',
-          rating: 0,
-          description: 'Return to Nairobi hotel or home'
-        },
-        highlights: ['Final beach sunrise', 'Coastal shopping', 'Scenic return flight', 'Beach memories'],
-        travelTime: '45 minutes flight + transfers',
-        distance: '500 km by air'
-      }
-    ]
+    transport: "Private vehicle"
   },
   {
     id: "3-days-diani-packages",
@@ -257,7 +66,7 @@ export const allPackages: Package[] = [
     location: "Diani Ukunda",
     rating: 4.5,
     duration: 3,
-    category: "Flying Safari",
+    category: "Beach",
     highlights: [
       "Africa's finest beach destination",
       "Crystal blue shallow waters",
@@ -491,7 +300,7 @@ export const allPackages: Package[] = [
     location: "Maasai Mara",
     rating: 4.5,
     duration: 3,
-    category: "Flying Safari",
+    category: "Safari",
     highlights: [
       "Great Migration river crossings",
       "Big Five wildlife sightings",
@@ -704,7 +513,7 @@ export const allPackages: Package[] = [
     location: "Samburu",
     rating: 4.5,
     duration: 3,
-    category: "Flying Safari",
+    category: "Safari",
     highlights: [
       "Scenic riverine forest landscapes",
       "Leopard sightings along Ewaso Nyiro River",
@@ -904,7 +713,7 @@ export const allPackages: Package[] = [
     location: "Tsavo",
     rating: 4.5,
     duration: 3,
-    category: "Flying Safari",
+    category: "Safari",
     highlights: [
       "Kenya's largest national park",
       "Famous red elephants",
@@ -942,7 +751,7 @@ export const allPackages: Package[] = [
     location: "Amboseli",
     rating: 4.5,
     duration: 3,
-    category: "Flying Safari",
+    category: "Safari",
     highlights: [
       "Mount Kilimanjaro views",
       "Large elephant herds",
@@ -981,7 +790,7 @@ export const allPackages: Package[] = [
     location: "Naivasha",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Great Rift Valley freshwater lake",
       "Lake Naivasha boat rides",
@@ -1140,7 +949,7 @@ export const allPackages: Package[] = [
     location: "Naivasha",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Lake Naivasha boat rides",
       "Beautiful scenic landscapes",
@@ -1175,7 +984,7 @@ export const allPackages: Package[] = [
     location: "Nakuru",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Lake Nakuru National Park",
       "Black and white rhino sanctuary",
@@ -1327,7 +1136,7 @@ export const allPackages: Package[] = [
     location: "Nakuru",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Lake Nakuru flamingo viewing",
       "Rhino sanctuary experience",
@@ -1363,7 +1172,7 @@ export const allPackages: Package[] = [
     location: "Nakuru",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Summer special rates",
       "Lake Nakuru weekend getaway",
@@ -1399,7 +1208,7 @@ export const allPackages: Package[] = [
     location: "Elementaita",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Lake Elementaita soda lake ecosystem",
       "Diverse birdlife viewing",
@@ -1434,7 +1243,7 @@ export const allPackages: Package[] = [
     location: "Mt Kenya",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Mount Kenya landscapes",
       "Unique mountain ecosystems",
@@ -1470,7 +1279,7 @@ export const allPackages: Package[] = [
     location: "Mt Kenya",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Group rates for chamas",
       "Mount Kenya experience",
@@ -1505,7 +1314,7 @@ export const allPackages: Package[] = [
     location: "Mt Kenya",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Majestic Mt Kenya views",
       "Scenic nature walks",
@@ -1541,7 +1350,7 @@ export const allPackages: Package[] = [
     location: "Nairobi",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Luxury staycation in Nairobi",
       "City hotel experience",
@@ -1576,7 +1385,7 @@ export const allPackages: Package[] = [
     location: "Nairobi Staycations",
     rating: 4.5,
     duration: 2,
-    category: "Flying Safari",
+    category: "Weekend",
     highlights: [
       "Extended staycation experience",
       "Premium city hotels",
