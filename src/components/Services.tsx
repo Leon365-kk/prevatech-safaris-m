@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "@/hooks/useTranslation";
-import airportImage from "@/assets/fleet 1.jpg";
-import safariImage from "@/assets/animal 3.jpg";
+import airportImage from "@/assets/fleet-1.jpg";
+import safariImage from "@/assets/animal-3.jpg";
 import dayToursImage from "@/assets/tourist1.jpg";
-import nature8 from "@/assets/nature 8.jpg";
-import nature9 from "@/assets/nature 9.jpg";
+import nature8 from "@/assets/nature-8.jpg";
+import nature9 from "@/assets/nature-9.jpg";
 
 const Services = () => {
   const { t } = useTranslation();

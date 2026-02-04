@@ -7,11 +7,11 @@ import { ArrowRight, Clock, Users, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import dayToursImage from "@/assets/tourist1.jpg";
 import safariImage from "@/assets/animal2.jpg";
-import heroImage from "@/assets/nature 3.jpg";
+import heroImage from "@/assets/nature-3.jpg";
 import animal4 from "@/assets/animal4.jpg";
 import animal5 from "@/assets/animal5.jpg";
-import nature4 from "@/assets/nature 4.jpg";
-import nature5 from "@/assets/nature 5.jpg";
+import nature4 from "@/assets/nature-4.jpg";
+import nature5 from "@/assets/nature-5.jpg";
 
 const dayTours = [
   {

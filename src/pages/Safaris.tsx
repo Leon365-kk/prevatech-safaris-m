@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin, Star, Search, Calendar, Users, Heart, Bird, Camera, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/nature 4.jpg";
+import heroImage from "@/assets/nature-4.jpg";
 import { generateAvailabilityData, getAvailableDatesInMonth } from "@/lib/availability-data";
 import { allPackages as packagesData, getPackagesByCategory, searchPackages } from "@/lib/packages-data";
 

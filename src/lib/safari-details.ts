@@ -1,9 +1,9 @@
-import nature2 from '@/assets/nature 2.jpg';
-import animal3 from '@/assets/animal 3.jpg';
-import fleet1 from '@/assets/fleet 1.jpg';
-import nature3 from '@/assets/nature 3.jpg';
+import nature2 from '@/assets/nature-2.jpg';
+import animal3 from '@/assets/animal-3.jpg';
+import fleet1 from '@/assets/fleet-1.jpg';
+import nature3 from '@/assets/nature-3.jpg';
 import animal4 from '@/assets/animal4.jpg';
-import nature4 from '@/assets/nature 4.jpg';
+import nature4 from '@/assets/nature-4.jpg';
 
 export interface ItineraryDay {
   day: number;

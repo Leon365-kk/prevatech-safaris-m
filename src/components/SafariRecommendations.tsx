@@ -15,14 +15,14 @@ import {
   TreePine
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import animal11 from '@/assets/animal 11.jpg';
-import animal12 from '@/assets/animal 12.jpg';
-import animal13 from '@/assets/animal 13.jpg';
-import animal14 from '@/assets/animal 14.jpg';
-import animal15 from '@/assets/animal 15.jpg';
-import animal16 from '@/assets/animal 16.jpg';
-import animal3 from '@/assets/animal 3.jpg';
-import animal9 from '@/assets/animal 9.jpg';
+import animal11 from '@/assets/animal-11.jpg';
+import animal12 from '@/assets/animal-12.jpg';
+import animal13 from '@/assets/animal-13.jpg';
+import animal14 from '@/assets/animal-14.jpg';
+import animal15 from '@/assets/animal-15.jpg';
+import animal16 from '@/assets/animal-16.jpg';
+import animal3 from '@/assets/animal-3.jpg';
+import animal9 from '@/assets/animal-9.jpg';
 import animal10 from '@/assets/animal10.jpg';
 import animal4 from '@/assets/animal4.jpg';
 import animal5 from '@/assets/animal5.jpg';

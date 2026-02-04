@@ -21,9 +21,9 @@ import {
 } from 'lucide-react';
 import { BlogPost } from '@/lib/safari-details';
 import { Link } from 'react-router-dom';
-import nature2 from '@/assets/nature 2.jpg';
-import animal3 from '@/assets/animal 3.jpg';
-import fleet1 from '@/assets/fleet 1.jpg';
+import nature2 from '@/assets/nature-2.jpg';
+import animal3 from '@/assets/animal-3.jpg';
+import fleet1 from '@/assets/fleet-1.jpg';
 
 interface BlogSectionProps {
   posts: BlogPost[];

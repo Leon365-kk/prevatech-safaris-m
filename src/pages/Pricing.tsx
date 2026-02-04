@@ -7,7 +7,7 @@ import QuoteBuilder from '@/components/QuoteBuilder';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Calculator, Table, DollarSign, ArrowRight } from 'lucide-react';
-import heroImage from "@/assets/nature 2.jpg";
+import heroImage from "@/assets/nature-2.jpg";
 
 const Pricing = () => {
   return (

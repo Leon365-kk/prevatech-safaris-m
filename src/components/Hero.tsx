@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "@/hooks/useTranslation";
-import heroImage from "@/assets/nature 2.jpg";
+import heroImage from "@/assets/nature-2.jpg";
 
 const Hero = () => {
   const { t } = useTranslation();
