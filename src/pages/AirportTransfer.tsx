@@ -7,8 +7,8 @@ import { ArrowRight, Check, Car, Clock, Shield, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import airportImage from "@/assets/vehicle-11.jpg";
 import fleet2 from "@/assets/vehicle-12.jpg";
-import fleet3 from "@/assets/fleet10.jpg";
-import fleet4 from "@/assets/fleet8.jpg";
+import fleet3 from "@/assets/fleet-11.jpg";
+import fleet4 from "@/assets/fleet-1.jpg";
 
 const transferServices = [
   {
